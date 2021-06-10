@@ -21,16 +21,20 @@ const Button: FC<ButtonProps & {}> = ({ style, text, ...rest }) => {
 };
 
 const _Default: FC<Props> = ({ navigation }) => {
-	const onPress = () => navigation.navigate("Carousel1");
-
 	return (
 		<ScrollView contentContainerStyle={styles.container}>
 			<StatusBar translucent />
 
 			<Button
 				style={styles.text}
-				onPress={onPress}
+				onPress={() => navigation.navigate("Carousel1")}
 				text="🐒 Carousel Animation #1"
+			/>
+
+			<Button
+				style={styles.text}
+				onPress={() => navigation.navigate("TimerAnimation")}
+				text="🐒 Timer Animation"
 			/>
 		</ScrollView>
 	);
@@ -47,5 +51,6 @@ const styles = StyleSheet.create({
 	text: {
 		fontSize: 20,
 		fontWeight: "800",
+        marginBottom: 20,
 	},
 });
