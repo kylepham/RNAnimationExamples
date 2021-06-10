@@ -3,11 +3,11 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { _Default, CarouselAnimation1 } from "./screens";
-
+import { _Default, CarouselAnimation1, TimerAnimation } from "./screens";
 export type RootStackParamList = {
 	Default: undefined;
 	Carousel1: undefined;
+    TimerAnimation: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -18,6 +18,7 @@ const App: FC = () => {
 			<Stack.Navigator headerMode="none" initialRouteName="Default">
 				<Stack.Screen name="Default" component={_Default} />
 				<Stack.Screen name="Carousel1" component={CarouselAnimation1} />
+				<Stack.Screen name="TimerAnimation" component={TimerAnimation} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
