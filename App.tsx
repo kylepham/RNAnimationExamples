@@ -3,12 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { _Default, CarouselAnimation1, TimerAnimation, CustomDrawer } from "./screens";
+import { _Default, CarouselAnimation1, TimerAnimation, CustomDrawer, ReanimatedExamples } from "./screens";
 export type RootStackParamList = {
 	Default: undefined;
 	Carousel1: undefined;
     TimerAnimation: undefined;
     CustomDrawer: undefined;
+    ReanimatedExamples: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -21,6 +22,8 @@ const App: FC = () => {
 				<Stack.Screen name="Carousel1" component={CarouselAnimation1} />
 				<Stack.Screen name="TimerAnimation" component={TimerAnimation} />
 				<Stack.Screen name="CustomDrawer" component={CustomDrawer} />
+				<Stack.Screen name="ReanimatedExamples" component={ReanimatedExamples} />
+
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

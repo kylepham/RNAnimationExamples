@@ -42,6 +42,12 @@ const _Default: FC<Props> = ({ navigation }) => {
 				onPress={() => navigation.navigate("CustomDrawer")}
 				text="🐒 Custom Drawer"
 			/>
+
+			<Button
+				style={styles.text}
+				onPress={() => navigation.navigate("ReanimatedExamples")}
+				text="🐒 Reanimated Examples"
+			/>
 		</ScrollView>
 	);
 };
